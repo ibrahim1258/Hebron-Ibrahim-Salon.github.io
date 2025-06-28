@@ -1,0 +1,457 @@
+ملاحظة:
+- استبدل 'صورة_اللوجو.jpg' برابط الصورة الفعلي لصالونك
+- استبدل GA_MEASUREMENT_ID بمعرف متتبع جوجل أناليتكس الخاص بك
+- احفظ الملف باسم index.html ثم انشره على أي خدمة استضافة مواقعHere is the updated HTML content after applying above edits:
+
+```html
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="صالون الخليل إبراهيم">
+    <meta property="og:description" content="أفضل صالون حلاقة وتجميل للرجال في الإسكندرية">
+    <meta property="og:image" content="صورة_اللوجو.jpg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>صالون الخليل إبراهيم | أفضل صالون حلاقة في الإسكندرية</title>
+    <meta name="description" content="احجز موعدك في صالون الخليل - حلاقة، تشذيب، صبغة واستشوار بأسعار مميزة">
+    <style>
+        :root {
+            --primary-color: #8B5A2B;
+            --secondary-color: #D2B48C;
+            --accent-color: #A0522D;
+            --text-color: #333;
+            --light-color: #f9f5f0;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+        
+        body {
+            background-color: var(--light-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            background: linear-gradient(to right, var(--primary-color), var(--accent-color));
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            border-radius: 0 0 15px 15px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        .logo {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        .tagline {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        
+        .hero {
+            height: 300px;
+            background-image: url('https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/bbab2dee-3478-4bb4-a7d7-003bf4a13d84.png');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 30px 0;
+            border-radius: 15px;
+            position: relative;
+        }
+        
+        .hero::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 15px;
+        }
+        
+        .hero-text {
+            position: relative;
+            z-index: 1;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        
+        .hero-text h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+        
+        section {
+            margin: 40px 0;
+            padding: 20px;
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        
+        h2 {
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--secondary-color);
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        
+        .service-card {
+            background-color: var(--light-color);
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            transition: transform 0.3s ease;
+            border: 1px solid var(--secondary-color);
+        }
+        
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .service-card h3 {
+            color: var(--accent-color);
+            margin-bottom: 10px;
+        }
+        
+        .price {
+            font-weight: bold;
+            font-size: 1.2rem;
+            color: var(--primary-color);
+        }
+        
+        .offer {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            display: inline-block;
+            margin-top: 10px;
+        }
+        
+        form {
+            display: grid;
+            gap: 15px;
+        }
+        
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        label {
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+        
+        input, select, textarea {
+            padding: 10px;
+            border: 1px solid var(--secondary-color);
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+        
+        button {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background-color 0.3s ease;
+        }
+        
+        button:hover {
+            background-color: var(--accent-color);
+        }
+        
+        .contact-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        
+        .info-card {
+            background-color: var(--light-color);
+            padding: 20px;
+            border-radius: 10px;
+            border: 1px solid var(--secondary-color);
+        }
+        
+        .info-card h3 {
+            color: var(--accent-color);
+            margin-bottom: 15px;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 15px;
+        }
+        
+        .social-links a {
+            color: var(--primary-color);
+            font-size: 1.5rem;
+            transition: color 0.3s ease;
+        }
+        
+        .social-links a:hover {
+            color: var(--accent-color);
+        }
+        
+        footer {
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+            background-color: var(--primary-color);
+            color: white;
+            border-radius: 15px 15px 0 0;
+        }
+        
+        @media (max-width: 768px) {
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .hero-text h1 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">صالون الخليل إبراهيم</div>
+            <div class="tagline">جمالك يبدأ من هنا</div>
+        </div>
+    </header>
+    
+    <div class="container">
+        <div class="hero">
+            <div class="hero-text">
+                <h1>أجمل تجربة حلاقة في الإسكندرية</h1>
+                <p>خبرة أكثر من 15 عاماً في أحدث صيحات الموضة</p>
+            </div>
+        </div>
+        
+        <section id="services">
+            <h2>خدماتنا وأسعارنا</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>حلاقة رجالي</h3>
+                    <p>أحدث قصات الشعر العالمية</p>
+                    <div class="price">80 ج.م</div>
+                </div>
+                
+                <div class="service-card">
+                    <h3>حلاقة الذقن</h3>
+                    <p>تشذيب دقيق بأفضل الأدوات</p>
+                    <div class="price">50 ج.م</div>
+                </div>
+                
+                <div class="service-card">
+                    <h3>استشوار</h3>
+                    <p>تصفيف محترف للشعر</p>
+                    <div class="price">70 ج.م</div>
+                </div>
+                
+                <div class="service-card">
+                    <h3>صبغة</h3>
+                    <p>أجود أنواع الصبغات</p>
+                    <div class="price">70 ج.م</div>
+                </div>
+                
+                <div class="service-card">
+                    <h3>ماسك</h3>
+                    <p>علاجات للشعر والوجه</p>
+                    <div class="price">20 ج.م</div>
+                </div>
+                
+                <div class="service-card">
+                    <h3>عرض الدلع كله</h3>
+                    <p>حلاقة + ذقن + صبغة + ماسك</p>
+                    <div class="price">250 ج.م</div>
+                    <div class="offer">توفير 30 ج.م</div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="booking">
+            <h2>حجز موعد</h2>
+            <form id="booking-form">
+                <div class="form-group">
+                    <label for="name">الاسم بالكامل</label>
+                    <input type="text" id="name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="phone">رقم الهاتف</label>
+                    <input type="tel" id="phone" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="service">الخدمة المطلوبة</label>
+                    <select id="service" required>
+                        <option value="">اختر خدمة</option>
+                        <option value="haircut">حلاقة رجالي - 80 ج.م</option>
+                        <option value="beard">حلاقة الذقن - 50 ج.م</option>
+                        <option value="blowdry">استشوار - 70 ج.م</option>
+                        <option value="color">صبغة - 70 ج.م</option>
+                        <option value="mask">ماسك - 20 ج.م</option>
+                        <option value="full">عرض الدلع كله - 250 ج.م</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="date">التاريخ</label>
+                    <input type="date" id="date" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="time">الوقت</label>
+                    <select id="time" required>
+                        <option value="">اختر وقت</option>
+                        <option value="18:00">6:00 مساءً</option>
+                        <option value="18:30">6:30 مساءً</option>
+                        <option value="19:00">7:00 مساءً</option>
+                        <option value="19:30">7:30 مساءً</option>
+                        <option value="20:00">8:00 مساءً</option>
+                        <option value="20:30">8:30 مساءً</option>
+                        <option value="21:00">9:00 مساءً</option>
+                        <option value="21:30">9:30 مساءً</option>
+                        <option value="22:00">10:00 مساءً</option>
+                        <option value="22:30">10:30 مساءً</option>
+                        <option value="23:00">11:00 مساءً</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="notes">ملاحظات إضافية (اختياري)</label>
+                    <textarea id="notes" rows="3"></textarea>
+                </div>
+                
+                <button type="submit">احجز الآن</button>
+            </form>
+        </section>
+        
+        <section id="contact">
+            <h2>معلومات التواصل</h2>
+            <div class="contact-info">
+                <div class="info-card">
+                    <h3>العنوان</h3>
+                    <p>23 Damanhour, Ezbet Saad, Sidi Gaber, Alexandria</p>
+                    
+                    <h3>مواعيد العمل</h3>
+                    <p>يومياً من 6 مساءً حتى 11 مساءً</p>
+                    <p>يوم الجمعة من 12 ظهراً حتى 4 مساءً ثم من 6 مساءً حتى 11 مساءً</p>
+                </div>
+                
+                <div class="info-card">
+                    <h3>اتصل بنا</h3>
+                    <p style="outline: rgb(0, 0, 0) dotted 3px; outline-offset: 1px;">
+                        <a href="https://wa.me/201554662566" target="_blank" style="color: #25D366; font-weight: bold;">للحجز عبر الواتساب: 01554662566</a>
+                    </p>
+                    
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    
+    <footer>
+        <div class="container">
+            <p>© 2024 صالون الخليل إبراهيم - جميع الحقوق محفوظة</p>
+        </div>
+    </footer>
+    
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'GA_MEASUREMENT_ID');
+    </script>
+    
+    <script>
+        document.getElementById('booking-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const name = document.getElementById('name').value;
+            const phone = document.getElementById('phone').value;
+            const service = document.getElementById('service').value;
+            const date = document.getElementById('date').value;
+            const time = document.getElementById('time').value;
+            
+            if (name && phone && service && date && time) {
+                let serviceText = '';
+                switch(service) {
+                    case 'haircut': serviceText = 'حلاقة رجالي - 80 ج.م'; break;
+                    case 'beard': serviceText = 'حلاقة الذقن - 50 ج.م'; break;
+                    case 'blowdry': serviceText = 'استشوار - 70 ج.م'; break;
+                    case 'color': serviceText = 'صبغة - 70 ج.م'; break;
+                    case 'mask': serviceText = 'ماسك - 20 ج.م'; break;
+                    case 'full': serviceText = 'عرض الدلع كله - 250 ج.م'; break;
+                }
+                
+                const whatsappMessage = `🎯 حجز جديد - صالون الخليل 🎯
+🔹 الاسم: ${name}  
+📱 الهاتف: ${phone}
+✂️ الخدمة: ${serviceText}  
+📅 التاريخ: ${date}  
+⏰ الوقت: ${time}  
+${document.getElementById('notes').value ? '🗒️ ملاحظات: ' + document.getElementById('notes').value : ''}`;
+
+                const whatsappNumber = '201554662566';
+                window.open(`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`, '_blank');
+                
+                alert('تم إرسال طلب الحجز بنجاح ✅\nسيتم التواصل معك على الواتساب للتأكيد\nشكراً لزيارتكم صالون الخليل ✨');
+                
+                // Clear form
+                this.reset();
+            } else {
+                alert('الرجاء ملء جميع الحقول المطلوبة');
+            }
+        });
+        
+        // Set minimum date to today
+        const today = new Date().toISOString().split('T')[0];
+        document.getElementById('date').setAttribute('min', today);
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</body>
+</html>

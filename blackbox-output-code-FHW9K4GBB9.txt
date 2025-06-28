@@ -1,0 +1,11 @@
+
+2. لإضافة روابط التواصل الاجتماعي بشكل صحيح:
+
+```diff
+<<<<<<< SEARCH
+                    <p style="outline: rgb(0, 0, 0) dotted 3px; outline-offset: 1px;">للحجز والاستفسار: 01554662566</p>
+=======
+                    <p style="outline: rgb(0, 0, 0) dotted 3px; outline-offset: 1px;">
+                        <a href="https://wa.me/201554662566" target="_blank" style="color: #25D366; font-weight: bold;">للحجز عبر الواتساب: 01554662566</a>
+                    </p>
+>>>>>>> REPLACE

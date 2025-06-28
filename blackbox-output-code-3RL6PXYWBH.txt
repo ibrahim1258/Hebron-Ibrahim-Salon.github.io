@@ -1,0 +1,13 @@
+
+3. لإضافة رأس الصفحة للمحركات البحثية:
+
+```diff
+<<<<<<< SEARCH
+    <meta charset="UTF-8">
+=======
+    <meta charset="UTF-8">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="صالون الخليل إبراهيم">
+    <meta property="og:description" content="أفضل صالون حلاقة وتجميل للرجال في الإسكندرية">
+    <meta property="og:image" content="صورة_اللوجو.jpg">
+>>>>>>> REPLACE
